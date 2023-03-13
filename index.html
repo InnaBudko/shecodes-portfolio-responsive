@@ -26,7 +26,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container navigation">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -56,24 +56,24 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
               <a class="nav-link" href="#">About</a>
               <a class="nav-link" href="#">Recipe</a>
-              <a class="nav-link">Contact</a>
+              <a class="nav-link pe-0">Contact</a>
             </div>
           </div>
         </div>
       </nav>
     </div>
-    <div class="container" style="max-width: 1440px">
+    <div class="container homepage-banner">
       <div class="row align-items-center">
         <div class="col">
-          <div class="card text-bg-dark text-center">
+          <div class="card text-bg-dark text-center rounded-0">
             <img
               src="/images/overlayBanner.png"
               class="card-img img-fluid"
               alt="banner"
             />
             <div class="card-img-overlay">
-              <h5 class="card-title recipe-collection">Recipe Collection</h5>
-              <p class="card-text recipe-slogan">
+              <h5 class="card-title banner-title">Recipe Collection</h5>
+              <p class="card-text banner-slogan">
                 Find a variety of inspiring recipes that are easy, delicious,
                 and healthy here
               </p>
@@ -84,13 +84,12 @@
     </div>
 
     <div class="container recipe-cards">
-      <div class="row ms-2 me-2">
+      <div class="row">
         <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_1.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
@@ -98,35 +97,25 @@
             </div>
           </div>
         </div>
-        <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+        <div class="col-md recipe-single-card d-flex justify-content-end">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_2.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
               <p class="card-text recipe-title">Wet Vegetable Spring Rolls</p>
             </div>
           </div>
-
-          <!-- <img
-            src="/images/dish_preview_2.png"
-            class="dish-img img-fluid"
-            style="max-height: 350px"
-            alt="recipe preview"
-          />
-          <div class="recipe-title">Wet Vegetable Spring Rolls</div> -->
         </div>
       </div>
-      <div class="row ms-2 me-2">
+      <div class="row">
         <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_3.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
@@ -134,12 +123,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+        <div class="col-md recipe-single-card d-flex justify-content-end">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_4.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
@@ -148,13 +136,12 @@
           </div>
         </div>
       </div>
-      <div class="row ms-2 me-2">
+      <div class="row">
         <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_5.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
@@ -162,12 +149,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+        <div class="col-md recipe-single-card d-flex justify-content-end">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_6.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
@@ -176,13 +162,12 @@
           </div>
         </div>
       </div>
-      <div class="row ms-2 me-2">
+      <div class="row">
         <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_7.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
@@ -190,12 +175,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md recipe-single-card">
-          <div class="card p-2 border-0">
+        <div class="col-md recipe-single-card d-flex justify-content-end">
+          <div class="card border-0">
             <img
               src="/images/dish_preview_8.png"
               class="card-img-top img-fluid"
-              style="max-height: 350px"
               alt="recipe preview"
             />
             <div class="card-body ps-0">
@@ -205,22 +189,28 @@
         </div>
       </div>
     </div>
-    <div class="container" style="max-width: 1440px">
-      <div class="row text-center align-items-center footer">
-        <div class="col-md">
-          <img
-            src="/images/SheCodes_logo.png"
-            alt="SheCodes"
-            class="footer-logo"
-            width="150"
-          />
+    <div class="container footer">
+      <div class="container footer-data">
+        <div class="row text-center align-items-center footer-content">
+          <div class="col-md footer-content-logo">
+            <img
+              src="/images/SheCodes_logo.png"
+              alt="SheCodes"
+              class="footer-logo"
+              width="150"
+            />
+          </div>
+          <div class="col-md">
+            <span class="social-icons">
+              <i class="fa-brands fa-square-facebook me-4"></i>
+              <i class="fa-brands fa-instagram me-4"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </span>
+          </div>
+          <div class="col-md copyright">
+            © 2021 SheCodes All rights reserved.
+          </div>
         </div>
-        <div class="col-md">
-          <i class="fa-brands fa-square-facebook fa-lg me-3"></i>
-          <i class="fa-brands fa-instagram fa-lg me-3"></i>
-          <i class="fa-brands fa-linkedin fa-lg"></i>
-        </div>
-        <div class="col-md copyright">© 2021 SheCodes All rights reserved.</div>
       </div>
     </div>
 

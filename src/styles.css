@@ -1,6 +1,7 @@
 :root {
   --active-nav-link-color: #662eed;
   --inactive-nav-link-color: #272142;
+  --text-basic-color: #272142;
 }
 
 .navbar-collapse .navbar-nav .nav-link.active {
@@ -19,12 +20,25 @@
   margin-top: 30px;
 }
 
-.card .card-title.recipe-collection {
+.container.navigation {
+  padding: 0px;
+  max-width: 1160px;
+}
+
+.homepage-banner {
+  padding: 0px;
+  max-width: 1440px;
+}
+.container.recipe-cards {
+  max-width: 1160px;
+}
+
+.card .card-title.banner-title {
   font-family: "Nunito", sans-serif;
   font-weight: bold;
 }
 
-.card .card-text.recipe-slogan {
+.card .card-text.banner-slogan {
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   display: block;
@@ -32,28 +46,62 @@
   margin: 0 auto;
 }
 
+.recipe-cards .card .card-img-top {
+  max-height: 350px;
+  max-width: 560px;
+  padding: 0px;
+}
+
 .recipe-title {
   font-family: "Nunito", sans-serif;
   font-weight: bold;
+  color: var(--text-basic-color);
 }
 
-.footer {
+.container.footer {
   background-color: #f9f7fe;
   height: 100px;
+  max-width: 1440px;
 }
 
-.footer .copyright {
+.container .footer-data,
+.footer-content {
+  height: 100px;
+  max-width: 1160px;
+}
+
+.footer-content .footer-content-logo {
+  padding-left: 0px;
+  text-align: left;
+}
+
+.footer-content .copyright {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  padding-right: 0px;
+  text-align: right;
+  color: var(--text-basic-color);
 }
+
+.footer-content .social-icons {
+  color: var(--text-basic-color);
+}
+
+/* Media queries zone */
 
 /* If the screen size is 820px wide or more */
 @media (min-width: 1201px) {
-  .card .card-title.recipe-collection {
+  .navbar .container-fluid {
+    padding: 0px;
+  }
+  .homepage-banner {
+    margin-top: 34px;
+  }
+  .card .card-title.banner-title {
     font-size: 72px;
     margin-top: 38px;
   }
-  .card .card-text.recipe-slogan {
+  .card .card-text.banner-slogan {
     font-size: 24px;
   }
   .recipe-title {
@@ -64,16 +112,23 @@
   }
   .recipe-single-card {
     margin-bottom: 30px;
+    padding: 0px;
   }
 }
 
 /* If the screen size is 820px wide or more */
 @media (max-width: 1200px) {
-  .card .card-title.recipe-collection {
+  .navbar .container-fluid {
+    padding: 8px;
+  }
+  .homepage-banner {
+    margin-top: 34px;
+  }
+  .card .card-title.banner-title {
     font-size: 42px;
     margin-top: 28px;
   }
-  .card .card-text.recipe-slogan {
+  .card .card-text.banner-slogan {
     font-size: 20px;
   }
   .recipe-title {
@@ -84,16 +139,23 @@
   }
   .recipe-single-card {
     margin-bottom: 20px;
+    padding: 8px;
   }
 }
 
 /* If the screen size is smaller than 820px */
 @media (max-width: 820px) {
-  .card .card-title.recipe-collection {
+  .navbar .container-fluid {
+    padding: 12px;
+  }
+  .homepage-banner {
+    margin-top: 10px;
+  }
+  .card .card-title.banner-title {
     font-size: 35px;
     margin-top: 20px;
   }
-  .card .card-text.recipe-slogan,
+  .card .card-text.banner-slogan,
   .recipe-title {
     font-size: 14px;
   }
@@ -102,8 +164,9 @@
   }
   .recipe-single-card {
     margin-bottom: 10px;
+    padding: 12px;
   }
-  .footer .copyright {
+  .footer-content .copyright {
     font-size: 12px;
   }
   .navbar-logo {
@@ -116,11 +179,17 @@
 
 /* If the screen size is smaller than 576px */
 @media (max-width: 576px) {
-  .card .card-title.recipe-collection {
+  .navbar .container-fluid {
+    padding: 10px;
+  }
+  .homepage-banner {
+    margin-top: 0px;
+  }
+  .card .card-title.banner-title {
     font-size: 20px;
     margin-top: 0px;
   }
-  .card .card-text.recipe-slogan {
+  .card .card-text.banner-slogan {
     font-size: 10px;
   }
   .recipe-cards {
@@ -128,6 +197,7 @@
   }
   .recipe-single-card {
     margin-bottom: 0px;
+    padding: 10px;
   }
   .navbar-logo {
     width: 100px;
