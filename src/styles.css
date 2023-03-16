@@ -2,6 +2,10 @@
   --active-nav-link-color: #662eed;
   --inactive-nav-link-color: #272142;
   --text-basic-color: #272142;
+  --text-secondary-color: #f65282;
+  --basic-font-family: "Nunito", sans-serif;
+  --seconday-font-family: "Roboto", sans-serif;
+  --list-border-color: #67d5d2;
 }
 
 .navbar-collapse .navbar-nav .nav-link.active {
@@ -14,32 +18,26 @@
 }
 
 .navbar a {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--basic-font-family);
   font-weight: bold;
   font-size: 16px;
   margin-top: 30px;
 }
 
-.container.navigation {
-  padding: 0px;
-  max-width: 1160px;
-}
-
-.homepage-banner {
-  padding: 0px;
-  max-width: 1440px;
-}
+.container.navigation,
+.homepage-banner,
 .container.recipe-cards {
   max-width: 1200px;
 }
 
-.card .card-title.banner-title {
-  font-family: "Nunito", sans-serif;
+.header {
+  font-family: var(--basic-font-family);
   font-weight: bold;
+  text-align: center;
 }
 
 .card .card-text.banner-slogan {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--basic-font-family);
   font-weight: bold;
   display: block;
   max-width: 560px;
@@ -51,60 +49,63 @@
   max-width: 560px;
 }
 
-.recipe-single-card .card-body {
+.recipe-full-card .card-img-top {
+  max-height: 450px;
+  max-width: 760px;
+  padding: 0px;
+}
+
+.recipe-single-card .card-body,
+.favorite-recipe-card .card-body,
+.recipe-full-card .card-body,
+.recipe-full-card .card-body .ingredients,
+.list-group-item {
   padding-left: 0px;
 }
 
-.recipe-title,
+.recipe-single-card .card-title,
 .my-name,
-.favorite-recipe-card .card-title {
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
+.favorite-recipe-card .card-title,
+.recipe-full-card .card-title,
+.ingredients-header,
+.method-header {
+  font-family: var(--basic-font-family);
   color: var(--text-basic-color);
+  font-weight: bold;
 }
 
-.container.footer {
-  background-color: #f9f7fe;
-  height: 100px;
-  max-width: 1440px;
-}
-
+.container.footer,
 .container .footer-data,
 .footer-content {
+  background-color: #f9f7fe;
   height: 100px;
-  max-width: 1160px;
+  max-width: 1200px;
 }
 
-.footer-content .footer-content-logo {
-  padding-left: 0px;
+.footer-content-logo {
   text-align: left;
 }
 
 .footer-content .copyright {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--seconday-font-family);
   font-size: 16px;
-  padding-right: 0px;
   text-align: right;
   color: var(--text-basic-color);
 }
 
-.footer-content .social-icons {
+.footer-content .social-icons,
+.about-me-header,
+.favorite-recipes-header,
+.full-recipe-header {
   color: var(--text-basic-color);
 }
 
 .container.about-me-section {
   max-width: 1000px;
 }
-.about-me-info {
-  padding: 15px;
-}
 
-.about-me-header,
-.favorite-recipes-header {
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
-  color: var(--text-basic-color);
-  text-align: center;
+.container.recipes-list-section {
+  max-width: 760px;
 }
 
 .my-portrait {
@@ -113,30 +114,42 @@
   padding: 0px;
 }
 
-.my-intro-text {
-  font-family: "Nunito", sans-serif;
-  font-size: 18px;
+.my-intro-text,
+.about-me-follow,
+.favorite-recipe-card .card-text,
+.ingredients-text,
+.method-text {
+  font-family: var(--basic-font-family);
   color: var(--text-basic-color);
   line-height: 30px;
+}
+
+.my-intro-text {
+  font-size: 18px;
 }
 
 .about-me-follow {
-  font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: bold;
-  line-height: 30px;
-  color: var(--text-basic-color);
-}
-
-.favorite-recipe-card .card-text {
-  font-family: "Nunito", sans-serif;
-  color: var(--text-basic-color);
-  line-height: 30px;
 }
 
 .favorite-recipe-card .card-img-top {
   max-width: 360px;
   max-height: 350px;
+}
+
+.recipe-steps-header {
+  font-family: var(--basic-font-family);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-secondary-color);
+}
+
+li.list-group-item.ingredients-text,
+.ingredients-header,
+.method-header {
+  border-bottom: dashed !important;
+  border-color: var(--list-border-color) !important;
 }
 
 /* Media queries zone */
@@ -153,26 +166,30 @@
     font-size: 72px;
     margin-top: 38px;
   }
-  .card .card-text.banner-slogan {
+  .card .card-text.banner-slogan,
+  .ingredients-header,
+  .method-header {
     font-size: 24px;
   }
-  .recipe-title {
+  .card-title {
     font-size: 28px;
   }
   .recipe-cards {
     margin-top: 100px;
     margin-bottom: 65px;
   }
-  .recipe-single-card {
-    margin-bottom: 30px;
-    padding: 0px;
-  }
-  .about-me-header {
+  .about-me-header,
+  .full-recipe-header {
     font-size: 72px;
     margin-top: 20px;
   }
-  .about-me-info {
+  .about-me-info,
+  .about-recipe-info.top-row {
     margin-top: 126px;
+    margin-bottom: 60px;
+  }
+  .about-recipe-info {
+    margin-bottom: 60px;
   }
   .my-name {
     font-size: 64px;
@@ -203,6 +220,12 @@
   .favorite-recipe-card .card-text {
     font-size: 16px;
   }
+
+  .recipe-full-card .card-title {
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
 }
 
 /* If the screen size is smaller than 1200px wide */
@@ -220,12 +243,20 @@
   .card .card-text.banner-slogan {
     font-size: 20px;
   }
-  .recipe-title {
+  .recipe-title,
+  .ingredients-header,
+  .method-header,
+  .recipe-steps-header {
     font-size: 28px;
   }
   .recipe-cards,
-  .about-me-info {
+  .about-me-info,
+  .about-recipe-info.top-row {
     margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .about-recipe-info {
+    margin-bottom: 30px;
   }
   .favorite-recipes-header {
     font-size: 36px;
@@ -235,7 +266,8 @@
   .favorite-recipe-card {
     margin-bottom: 20px;
   }
-  .about-me-header {
+  .about-me-header,
+  .full-recipe-header {
     font-size: 42px;
     margin-top: 14px;
   }
@@ -253,7 +285,9 @@
   .navbar .container-fluid {
     padding: 12px;
   }
-  .homepage-banner {
+  .homepage-banner,
+  .my-intro-text,
+  .about-me-follow {
     margin-top: 10px;
   }
   .card .card-title.banner-title {
@@ -261,35 +295,40 @@
     margin-top: 20px;
   }
   .card .card-text.banner-slogan,
-  .recipe-title {
-    font-size: 14px;
+  .recipe-title,
+  .favorite-recipe-card .card-title,
+  .ingredients-header,
+  .method-header,
+  .recipe-steps-header {
+    font-size: 18px;
   }
   .recipe-cards,
-  .about-me-info {
+  .about-me-info,
+  .about-recipe-info.top-row {
     margin-top: 50px;
+    margin-bottom: 30px;
   }
-  .recipe-single-card .card-body {
+  .about-recipe-info {
+    margin-bottom: 30px;
+  }
+  .recipe-single-card .card-body,
+  .recipe-full-card .card-body {
     padding: 5px 0px;
   }
   .footer-content .copyright {
     font-size: 12px;
   }
-  .navbar-logo {
-    width: 100px;
-  }
+  .navbar-logo,
   .footer-logo {
-    width: 100px;
+    max-width: 100px;
   }
-  .about-me-header {
+  .about-me-header,
+  .full-recipe-header {
     font-size: 35px;
     margin-top: 8px;
   }
   .my-name {
     font-size: 28px;
-  }
-  .my-intro-text,
-  .about-me-follow {
-    margin-top: 10px;
   }
   .favorite-recipes-header {
     font-size: 26px;
@@ -305,7 +344,8 @@
   .homepage-banner {
     margin-top: 0px;
   }
-  .card .card-title.banner-title {
+  .card .card-title.banner-title,
+  .my-name {
     font-size: 20px;
     margin-top: 0px;
   }
@@ -313,33 +353,46 @@
     font-size: 10px;
   }
   .recipe-cards,
-  .about-me-info {
-    margin-top: 20px;
+  .about-me-info,
+  .about-recipe-info.about-recipe-info.top-row {
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
-  .recipe-single-card .card-body {
+  .about-recipe-info {
+    margin-bottom: 25px;
+  }
+  .recipe-single-card .card-body,
+  .recipe-full-card .card-body {
     padding: 5px 0px;
   }
-  .navbar-logo {
-    width: 100px;
-  }
+  .navbar-logo,
   .footer-logo {
-    width: 100px;
+    max-width: 100px;
   }
-  .about-me-header {
+  .about-me-header,
+  .full-recipe-header {
     font-size: 20px;
     margin-top: 0px;
-  }
-  .my-name {
-    font-size: 20px;
-    margin-top: 20px;
-  }
-  .my-intro-text,
-  .about-me-follow {
-    margin-top: 20px;
   }
   .favorite-recipes-header {
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  .footer-logo {
+    display: block;
+    margin: 0 auto;
+  }
+  .footer-content .copyright {
+    text-align: center;
+  }
+  .ingredients-header,
+  .method-header {
+    margin: 10px 0px 10px 0px;
+    border: none !important;
+  }
+  .ingredients,
+  .steps {
+    padding: 0px;
   }
 }
