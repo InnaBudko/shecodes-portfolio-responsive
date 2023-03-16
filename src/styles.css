@@ -96,7 +96,8 @@
 .footer-content .social-icons,
 .about-me-header,
 .favorite-recipes-header,
-.full-recipe-header {
+.full-recipe-header,
+.contacts-icon {
   color: var(--text-basic-color);
 }
 
@@ -118,7 +119,8 @@
 .about-me-follow,
 .favorite-recipe-card .card-text,
 .ingredients-text,
-.method-text {
+.method-text,
+.contacts-details {
   font-family: var(--basic-font-family);
   color: var(--text-basic-color);
   line-height: 30px;
@@ -152,6 +154,19 @@ li.list-group-item.ingredients-text,
   border-color: var(--list-border-color) !important;
 }
 
+.contacts .contacts-header {
+  font-family: var(--basic-font-family);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--active-nav-link-color);
+  text-transform: uppercase;
+}
+
+.contact-email {
+  text-decoration: none;
+  color: var(--text-basic-color);
+}
+
 /* Media queries zone */
 
 /* If the screen size is 1201px wide or more */
@@ -168,7 +183,8 @@ li.list-group-item.ingredients-text,
   }
   .card .card-text.banner-slogan,
   .ingredients-header,
-  .method-header {
+  .method-header,
+  .contacts-details {
     font-size: 24px;
   }
   .card-title {
@@ -220,10 +236,15 @@ li.list-group-item.ingredients-text,
   .favorite-recipe-card .card-text {
     font-size: 16px;
   }
-
   .recipe-full-card .card-title {
     font-size: 36px;
     margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .contacts {
+    margin: 50px 0px;
+  }
+  .contacts-header {
     margin-bottom: 20px;
   }
 }
@@ -240,7 +261,8 @@ li.list-group-item.ingredients-text,
     font-size: 42px;
     margin-top: 28px;
   }
-  .card .card-text.banner-slogan {
+  .card .card-text.banner-slogan,
+  .contacts-details {
     font-size: 20px;
   }
   .recipe-title,
@@ -278,6 +300,12 @@ li.list-group-item.ingredients-text,
   .about-me-follow {
     margin-top: 26px;
   }
+  .contacts {
+    margin: 30px 0px;
+  }
+  .contacts-header {
+    margin: 15px 0px;
+  }
 }
 
 /* If the screen size is smaller than 820px */
@@ -299,7 +327,8 @@ li.list-group-item.ingredients-text,
   .favorite-recipe-card .card-title,
   .ingredients-header,
   .method-header,
-  .recipe-steps-header {
+  .recipe-steps-header,
+  .contacts-details {
     font-size: 18px;
   }
   .recipe-cards,
@@ -333,6 +362,12 @@ li.list-group-item.ingredients-text,
   .favorite-recipes-header {
     font-size: 26px;
     margin-bottom: 25px;
+  }
+  .contacts {
+    margin: 20px 0px;
+  }
+  .contacts-header {
+    margin: 5px 0px;
   }
 }
 
@@ -394,5 +429,11 @@ li.list-group-item.ingredients-text,
   .ingredients,
   .steps {
     padding: 0px;
+  }
+  .contacts {
+    margin: 15px 0px;
+  }
+  .contacts-header {
+    margin: 5px 0px;
   }
 }
