@@ -93,6 +93,11 @@
   color: var(--text-basic-color);
 }
 
+.footer-content .copyright a {
+  text-decoration: none;
+  color: var(--active-nav-link-color);
+}
+
 .footer-content .social-icons,
 .social-icons a,
 .about-me-header,
